@@ -29,6 +29,12 @@ topojson > us2016.topo.json \
 			--id-property GEOID
 ```
 
+``` terminal
+
+$ bash makefile.sh
+
+```
+
 Notes: -q and -s stand for “quantization” and “simplification” respectfully. Each has some bearing on the file size and level of detail in the output file. Each are documented in the command line reference, but the best explanation I’ve read is here in this article: http://zevross.com/blog/2014/04/22/spatial-data-on-a-diet-tips-for-file-size-reduction-using-topojson/.
 
 The output file is a TopoJSON file roughly 1.5MB in size. Each of the features nested in the states, counties and districts objects is keyed by it’s GEOID property, which in the original shapefiles is the FIPS.
