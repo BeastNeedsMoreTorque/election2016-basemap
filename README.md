@@ -13,7 +13,7 @@ Start by putting all three of our shapefiles in one directory.
 
 Using the command line, we’ll create a new TopoJSON file that contains topology for states, counties, and districts as separate objects.
 
-'''shell
+```shell
 topojson > us2016.topo.json \
 	-q 5e3 \
 	-s 1e-8 \
@@ -23,7 +23,7 @@ topojson > us2016.topo.json \
 			--id-property GEOID \
 		counties=cb_2015_us_county_500k/cb_2015_us_county_500k.shp \
 			--id-property GEOID
-'''
+```
 
 Notes: -q and -s stand for “quantization” and “simplification” respectfully. Each has some bearing on the file size and level of detail in the output file. Each are documented in the command line reference, but the best explanation I’ve read is here in this article: http://zevross.com/blog/2014/04/22/spatial-data-on-a-diet-tips-for-file-size-reduction-using-topojson/.
 
