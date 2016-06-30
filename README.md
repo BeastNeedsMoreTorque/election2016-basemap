@@ -1,6 +1,11 @@
 ###Election Basemap with D3.js and TopoJson
 
-National election results in the U.S. are reported generally at three levels: by state, by County, and by congressional district. During the primaries and general election, the Associated Press provides live results by subscription. Results are keyed by FIPS codes at the state, county, and district level. This article will outline the process for building a bare-bones front-facing election map in two parts: 1) Create a topojson file with states, counties, and congressional districts using Census Bureau shapefiles and the Topojson command line tool. 2) Build a responsive, zoomable, USA Albers-projected map using JavaScript and the D3.js library.
+National election results in the U.S. are reported generally at three levels: by state, by County, and by congressional district. During the primaries and general election, the Associated Press provides live results by subscription. Results are keyed by FIPS codes at the state, county, and district level. This article will outline the process for building a bare-bones front-facing election map in two parts:
+1. Create a topojson file with states, counties, and congressional districts using Census Bureau shapefiles and the Topojson command line tool.
+2. Build a responsive, zoomable, USA Albers-projected map using JavaScript and the D3.js library.
+
+
+####Creating the TopoJSON
 
 The U.S. Census Bureau [provides shapefiles](https://www.census.gov/geo/maps-data/data/tiger-cart-boundary.html) for states, counties, and congressional districts, as well as populated areas, zip codes and, of course, census tracts. It’s a gold mine! To build our election map topojson file, we’ll start by downloading the highest resolutions files for states, counties and districts. (The shapefiles are listed with 500K, 5M and 20M. Counterintuitively, the 500K file is actually the largest.)
 
