@@ -2,6 +2,7 @@
 
 Hey there. So you want to make an election map using TopoJSON and D3! Well good news, friend. I'm here to outline a relatively simple approach I've worked out after making maps through a couple of national election cycles and a long primary season.
 
+
 First, the basics. National election results in the U.S. are reported generally at three levels: by state, by County, and by congressional district. During the primaries and general election, the Associated Press provides live results by subscription. Results are keyed by FIPS codes at the state, county, and district level. This Gist will outline the process for building a bare-bones front-facing election map without getting into the AP's feed and how one loads it. (But if you're interested, I'd suggest checking out the excellent [Elex project](https://source.opennews.org/en-US/articles/introducing-elex-tool-make-election-coverage-bette/).) This tutorial is broken out in two parts:
 
 1. Create a topojson file with states, counties, and congressional districts using Census Bureau shapefiles and the Topojson command line tool.
